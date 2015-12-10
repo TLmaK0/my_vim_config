@@ -1,6 +1,4 @@
 # my_vim_config
-Vim configuration for ruby and scala projects
-
 
 This command will replace your existing .vimrc:
 
