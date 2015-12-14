@@ -30,7 +30,7 @@ if has('unix')
 end
 colorscheme spacegray
 
-#custom ruby colors
+" custom ruby colors
 hi link yardGenericTag rubyComment
 hi link yardParamName rubyComment
 hi link yardType rubySymbol
