@@ -18,7 +18,19 @@ call vundle#begin()
 Plugin 'derekwyatt/vim-scala'
 Plugin 'pangloss/vim-javascript'
 Plugin 'editorconfig/editorconfig-vim'
+Bundle 'noprompt/vim-yardoc'
+Bundle 'ajh17/Spacegray.vim'
 call vundle#end()
 filetype plugin indent on
 
 command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
+syntax on
+if has('unix')
+  set t_Co=256
+end
+colorscheme spacegray
+
+#custom ruby colors
+hi link yardGenericTag rubyComment
+hi link yardParamName rubyComment
+hi link yardType rubySymbol
