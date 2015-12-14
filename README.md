@@ -7,3 +7,5 @@ This command will replace your existing .vimrc:
 Then run Vundle install:
 
 ```vim +PluginInstall +qall```
+
+For ruby autocomplete, be sure that :ve return +ruby. In Ubuntu ```sudo apt-get install vim-nox``` for +ruby support.
