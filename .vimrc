@@ -8,6 +8,7 @@ let g:vim_markdown_folding_disabled=1
 set autochdir
 au BufRead,BufNewFile *.pp set filetype=ruby
 au BufReadPost *.hbs set syntax=html
+au BufNewFile,BufRead *.slm set filetype=slim
 set shiftwidth=2
 
 highlight htmlLink ctermbg=black
@@ -20,6 +21,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'editorconfig/editorconfig-vim'
 Bundle 'noprompt/vim-yardoc'
 Bundle 'ajh17/Spacegray.vim'
+Bundle 'git@github.com:slim-template/vim-slim.git'
 call vundle#end()
 filetype plugin indent on
 
