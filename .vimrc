@@ -5,12 +5,13 @@ set ts=2
 set et
 set encoding=utf-8
 let g:vim_markdown_folding_disabled=1
+let g:netrw_keepdir=0
+
 set autochdir
 au BufRead,BufNewFile *.pp set filetype=ruby
 au BufReadPost *.hbs set syntax=html
 au BufNewFile,BufRead *.slm set filetype=slim
 set shiftwidth=2
-set autochdir
 
 highlight htmlLink ctermbg=black
 highlight htmlLink ctermfg=red
