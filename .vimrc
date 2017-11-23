@@ -10,6 +10,7 @@ au BufRead,BufNewFile *.pp set filetype=ruby
 au BufReadPost *.hbs set syntax=html
 au BufNewFile,BufRead *.slm set filetype=slim
 set shiftwidth=2
+set autochdir
 
 highlight htmlLink ctermbg=black
 highlight htmlLink ctermfg=red
