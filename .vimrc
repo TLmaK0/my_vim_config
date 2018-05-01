@@ -21,6 +21,7 @@ call vundle#begin()
 Plugin 'derekwyatt/vim-scala'
 Plugin 'pangloss/vim-javascript'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'leafgarland/typescript-vim'
 Bundle 'noprompt/vim-yardoc'
 Bundle 'ajh17/Spacegray.vim'
 Bundle 'git@github.com:slim-template/vim-slim.git'
