@@ -4,6 +4,7 @@ set number
 set ts=2
 set et
 set encoding=utf-8
+set incsearch
 let g:vim_markdown_folding_disabled=1
 let g:netrw_keepdir=0
 
