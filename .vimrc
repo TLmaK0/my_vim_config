@@ -7,7 +7,6 @@ set encoding=utf-8
 set incsearch
 let g:vim_markdown_folding_disabled=1
 let g:netrw_keepdir=0
-set mouse+=a
 
 set autochdir
 au BufRead,BufNewFile *.pp set filetype=ruby
