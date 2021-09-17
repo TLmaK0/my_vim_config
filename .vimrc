@@ -35,6 +35,7 @@ Plug 'slim-template/vim-slim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'digitaltoad/vim-pug'
 call plug#end()
 
 filetype plugin indent on
