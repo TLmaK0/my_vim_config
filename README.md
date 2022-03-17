@@ -1,4 +1,4 @@
-# my_vim_config
+# Vim and Tmux config replacement
 
 This command will replace your existing .vimrc and .tmux.conf:
 
