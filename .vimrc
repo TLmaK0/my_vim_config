@@ -6,9 +6,25 @@ set et
 set encoding=utf-8
 set incsearch
 
-set backupdir=.backup/,~/.backup/,/tmp//
-set directory=.swp/,~/.swp/,/tmp//
-set undodir=.undo/,~/.undo/,/tmp//
+if isdirectory($HOME . '/.vim/.backup') == 0
+  :silent !mkdir -p ~/.vim/.backup >/dev/null 2>&1
+endif
+
+if isdirectory($HOME . '/.vim/.swap') == 0
+  :silent !mkdir -p ~/.vim/.swap >/dev/null 2>&1
+endif
+
+if isdirectory($HOME . '/.vim/.undo') == 0
+  :silent !mkdir -p ~/.vim/.undo >/dev/null 2>&1
+endif
+
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swap//
+set undodir=~/.vim/.undo//
+
+" Fix problems with file watchers looking for updates, like Watchman
+" https://github.com/facebook/metro/issues/1211#issuecomment-1930208508
+set backupcopy=yes
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -37,6 +53,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'digitaltoad/vim-pug'
 Plug 'tpope/vim-fugitive'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 filetype plugin indent on
@@ -87,6 +104,9 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
@@ -106,11 +126,14 @@ nmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>ac  <Plug>(coc-codeaction)
 
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <silent> qf <Plug>(coc-fix-current)
 
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+
+nmap <Leader>j <Plug>(coc-diagnostic-next-error)
+nmap <Leader>k <Plug>(coc-diagnostic-prev-error)
 
 let g:coc_user_config = {
   \   "coc.preferences.jumpCommand": "tab drop",
