@@ -54,6 +54,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'digitaltoad/vim-pug'
 Plug 'tpope/vim-fugitive'
 Plug 'hashivim/vim-terraform'
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 filetype plugin indent on
@@ -63,7 +64,9 @@ syntax on
 if has('unix')
   set t_Co=256
 end
-colorscheme spacegray
+
+autocmd BufEnter * colorscheme spacegray                                                                                                                                                                           
+autocmd BufEnter *.graphql colorscheme jellybeans
 let g:airline_theme='wombat'
 
 " custom ruby colors
