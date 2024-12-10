@@ -46,9 +46,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'noprompt/vim-yardoc'
-Plug 'ajh17/Spacegray.vim'
+Plug 'vim-scripts/Spacegray.vim'
 Plug 'slim-template/vim-slim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'tag': 'v0.0.81'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'digitaltoad/vim-pug'
